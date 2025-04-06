@@ -85,8 +85,8 @@ yarn build
 - updateButtonState(isInBasket: boolean, isPriceless: boolean): void: Обновляет состояние кнопки "В корзину".
 
 События:
-- Эмитирует 'product:selected' при выборе товара.
-- Эмитирует 'product:addToBasket' при добавлении товара в корзину.
+- Эмитирует `product:selected` при выборе товара.
+- Эмитирует `product:addToBasket` при добавлении товара в корзину.
 
 ## Класс BasketView
 Отображает содержимое корзины и обрабатывает действия пользователя.
@@ -96,8 +96,8 @@ yarn build
 - toggleCheckoutButton(isEnabled: boolean): void: Включает/отключает кнопку оформления заказа.
 
 События:
-- Эмитирует 'basket:removeItem' при удалении товара.
-- Эмитирует 'basket:checkout' при нажатии на кнопку оформления заказа.
+- Эмитирует `basket:removeItem` при удалении товара.
+- Эмитирует `basket:checkout` при нажатии на кнопку оформления заказа.
 
 ## Класс OrderForm
 Форма оформления заказа.
@@ -108,7 +108,7 @@ yarn build
 - getData(): IOrderFormData: Возвращает данные формы.
 
 События:
-- Эмитирует 'orderForm:submit' при отправке формы.
+- Эмитирует `orderForm:submit` при отправке формы.
 
 ## Класс ContactForm
 Форма ввода контактных данных.
@@ -117,8 +117,9 @@ yarn build
 - render(data?: IContactFormData): void: Отображает форму контактов.
 - validate(): boolean: Проверяет валидность введенных данных.
 - getData(): IContactFormData: Возвращает данные формы.
+
 События:
-- Эмитирует 'contactForm:submit' при отправке формы.
+- Эмитирует `contactForm:submit` при отправке формы.
 
 ## Класс SuccessView
 Отображает сообщение об успешном оформлении заказа.
@@ -134,7 +135,7 @@ yarn build
 - updateBasketCounter(count: number): void: Обновляет счетчик товаров в корзине.
 
 События:
-- Эмитирует 'basket:open' при нажатии на кнопку корзины.
+- Эмитирует `basket:open` при нажатии на кнопку корзины.
 
 ## Класс Modal 
 Управляет модальными окнами.
@@ -143,7 +144,7 @@ yarn build
 - open(content: HTMLElement): void: Открывает модальное окно.
 - close(): void: Закрывает модальное окно.
 События:
-- Эмитирует 'modal:opened' и 'modal:closed'.
+- Эмитирует `modal:opened` и `modal:closed`.
 
 ## Класс Form
 Базовый класс для форм.
@@ -161,8 +162,9 @@ yarn build
 - async loadProducts(): Promise<void>: Загружает список товаров с сервера.
 - getProducts(): IProduct[]: Возвращает список товаров.
 - getProductById(id: string): IProduct | undefined: Возвращает товар по ID.
+
 События:
-- Эмитирует 'products:loaded' после загрузки товаров.
+- Эмитирует `products:loaded` после загрузки товаров.
 
 ## Класс BasketModel
 Управляет данными корзины.
@@ -228,18 +230,18 @@ yarn build
 ## Взаимодействие компонентов и процессы в приложении
 Основные события
 События от моделей
-`products:loaded` — После загрузки списка товаров (ProductModel).
-`basket:updated` — При изменении корзины (BasketModel).
-`order:validated` — При успешной валидации заказа (OrderModel).
-`order:invalid` — При ошибке валидации заказа (OrderModel).
-`order:submitted` — После успешной отправки заказа (OrderModel).
+- `products:loaded` — После загрузки списка товаров (ProductModel).
+- `basket:updated` — При изменении корзины (BasketModel).
+- `order:validated` — При успешной валидации заказа (OrderModel).
+- `order:invalid` — При ошибке валидации заказа (OrderModel).
+- `order:submitted` — После успешной отправки заказа (OrderModel).
 
 События от представлений
-`product:selected` — При выборе товара (ProductCard).
-`product:addToBasket` — При добавлении товара в корзину (ProductCard).
-`basket:removeItem` — При удалении товара из корзины (BasketView).
-`basket:checkout` — При переходе к оформлению заказа (BasketView).
-`orderForm:submit` — При отправке формы заказа (OrderForm).
-`contactForm:submit` — При отправке формы контактов (ContactForm).
-`basket:open` — При открытии корзины (MainPage).
-`modal:opened` и `modal:closed` — При открытии/закрытии модального окна (Modal).
+- `product:selected` — При выборе товара (ProductCard).
+- `product:addToBasket` — При добавлении товара в корзину (ProductCard).
+- `basket:removeItem` — При удалении товара из корзины (BasketView).
+- `basket:checkout` — При переходе к оформлению заказа (BasketView).
+- `orderForm:submit` — При отправке формы заказа (OrderForm).
+- `contactForm:submit` — При отправке формы контактов (ContactForm).
+- `basket:open` — При открытии корзины (MainPage).
+- `modal:opened` и `modal:closed` — При открытии/закрытии модального окна (Modal).
