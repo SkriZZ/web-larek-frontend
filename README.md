@@ -97,8 +97,10 @@ constructor()
 
 ### Методы класса
 #### Конструктор
-
-- `constructor(protected readonly container: HTMLElement)` - Инициализирует компонент с заданным контейнером. Используется для наследования в конкретных компонентах.
+```typescript
+constructor(protected readonly container: HTMLElement)
+```
+Инициализирует компонент с заданным контейнером. Используется для наследования в конкретных компонентах.
 
 - `toggleClass(element: HTMLElement, className: string, force?: boolean): void` - Добавляет или удаляет класс у элемента в зависимости от значения `force`.
 
@@ -115,8 +117,10 @@ constructor()
 
 ### Методы класса
 #### Конструктор
-
-- `constructor(data: Partial<T>, protected events: IEvents)` - Инициализирует модель с данными и событиями, переданными через параметры. Используется для наследования в конкретных моделях.
+```typescript
+constructor(data: Partial<T>, protected events: IEvents)
+```
+Инициализирует модель с данными и событиями, переданными через параметры. Используется для наследования в конкретных моделях.
 
 - `emitChanges(event: string, payload?: object): void` - Вызывает событие с указанным именем и данными.
 
@@ -130,8 +134,10 @@ constructor()
 
 ### Методы класса
 #### Конструктор
-
-- constructor(cdnUrl: string, baseUrl: string, options?: RequestInit) - Инициализирует экземпляр класса `LarekApi` с базовым URL для API и CDN.
+```typescript
+constructor(cdnUrl: string, baseUrl: string, options?: RequestInit)
+```
+Инициализирует экземпляр класса `LarekApi` с базовым URL для API и CDN.
 
 - `fetchProductList(): Promise<IProductItem[]>` - Получает список продуктов из API.
 
@@ -150,7 +156,10 @@ constructor()
 
 ### Методы класса
 #### Конструктор
-- `constructor(data: Partial<IAppState>, events: EventEmitter)` - Инициализирует экземпляр класса `AppData` с начальными данными и подписывает события.
+```typescript
+constructor(data: Partial<IAppState>, events: EventEmitter)
+```
+Инициализирует экземпляр класса `AppData` с начальными данными и подписывает события.
 
 - `clearBasket(): void` - Очищает корзину и удаляет товары из заказа.
 
@@ -222,7 +231,10 @@ interface ICard {
 
 ### Методы класса
 #### Конструктор
-- `constructor(container: HTMLElement, actions?: ICardActions)` - Инициализирует экземпляр класса `Card` и настраивает обработчики событий, если они переданы.
+```typescript
+constructor(container: HTMLElement, actions?: ICardActions)
+```
+Инициализирует экземпляр класса `Card` и настраивает обработчики событий, если они переданы.
 
 - `set title(value: string): void` - Устанавливает заголовок карточки.
 
@@ -241,7 +253,10 @@ interface ICard {
 
 ### Методы класса
 #### Конструктор
-- `constructor(container: HTMLElement, actions?: ICardActions)` - Инициализирует экземпляр класса `CardPreview` и настраивает обработчики событий для кнопки добавления в корзину.
+```typescript
+constructor(container: HTMLElement, actions?: ICardActions)
+```
+Инициализирует экземпляр класса `CardPreview` и настраивает обработчики событий для кнопки добавления в корзину.
 
 - `set text(content: string): void` - Устанавливает текст описания карточки.
 
@@ -258,7 +273,10 @@ interface ICard {
 
 ### Методы класса
 #### Конструктор
-- `constructor(container: HTMLElement, actions?: ICardActions)` - Инициализирует экземпляр класса `CardBasket` и настраивает обработчик удаления товара из корзины.
+```typescript
+constructor(container: HTMLElement, actions?: ICardActions)
+```
+Инициализирует экземпляр класса `CardBasket` и настраивает обработчик удаления товара из корзины.
 
 - `set title(value: string): void` - Устанавливает заголовок товара в корзине.
 
@@ -279,7 +297,10 @@ interface ICard {
 
 ### Методы класса
 #### Конструктор
-- `constructor(container: HTMLElement, private eventBus: IEvents)` - Инициализирует экземпляр класса `Page` с контейнером страницы и шиной событий. Также настраивает элементы интерфейса и подписывает обработчики событий.
+```typescript
+constructor(container: HTMLElement, private eventBus: IEvents)
+```
+Инициализирует экземпляр класса `Page` с контейнером страницы и шиной событий. Также настраивает элементы интерфейса и подписывает обработчики событий.
 
 - `set counter(count: number): void` - Обновляет отображение количества товаров в корзине.
 
@@ -298,8 +319,10 @@ interface ICard {
 
 ### Методы класса
 #### Конструктор
-
-- `constructor(container: HTMLElement, private eventBus: IEvents)` - Инициализирует экземпляр класса `Modal` с контейнером для модального окна и шиной событий. Настраивает элементы интерфейса и подписывает обработчики событий.
+```typescript
+constructor(container: HTMLElement, private eventBus: IEvents)
+```
+Инициализирует экземпляр класса `Modal` с контейнером для модального окна и шиной событий. Настраивает элементы интерфейса и подписывает обработчики событий.
 
 - `set content(element: HTMLElement): void` - Устанавливает содержимое модального окна.
 
@@ -319,7 +342,10 @@ interface ICard {
 
 ### Методы класса
 #### Конструктор
-- `constructor(container: HTMLElement, private eventBus: EventEmitter)` - Инициализирует экземпляр класса `Basket` с контейнером корзины и шиной событий. Настраивает элементы интерфейса и подписывает обработчики событий.
+```typescript
+constructor(container: HTMLElement, private eventBus: EventEmitter)
+```
+Инициализирует экземпляр класса `Basket` с контейнером корзины и шиной событий. Настраивает элементы интерфейса и подписывает обработчики событий.
 
 - `set items(elements: HTMLElement[]): void` - Устанавливает список товаров в корзине. Если корзина пуста, отображает сообщение "Корзина пуста".
 
@@ -336,7 +362,10 @@ interface ICard {
 
 ### Методы класса
 #### Конструктор
-- `constructor(formElement: HTMLFormElement, eventBus: IEvents)` - Инициализирует экземпляр класса `Order`. Настраивает кнопки выбора способа оплаты и подписывает их на события изменения.
+```typescript
+constructor(formElement: HTMLFormElement, eventBus: IEvents)
+```
+Инициализирует экземпляр класса `Order`. Настраивает кнопки выбора способа оплаты и подписывает их на события изменения.
 
 - `set payment(name: string): void` - Устанавливает активный способ оплаты, добавляя класс `button_alt-active` к выбранной кнопке и убирая его с остальных.
 
@@ -349,7 +378,10 @@ interface ICard {
 
 ### Методы класса
 #### Конструктор
-- `constructor(formElement: HTMLFormElement, eventBus: IEvents)` - Инициализирует экземпляр класса `Contacts`.
+```typescript
+constructor(formElement: HTMLFormElement, eventBus: IEvents)
+```
+Инициализирует экземпляр класса `Contacts`.
 
 - `set phone(value: string): void` - Устанавливает значение для поля телефона в форме.
 
@@ -366,7 +398,10 @@ interface ICard {
 
 ### Методы класса
 #### Конструктор
-- `constructor(formElement: HTMLFormElement, eventBus: IEvents)` - Инициализирует экземпляр класса `Form` с элементом формы и шиной событий. Настраивает элементы интерфейса и подписывает обработчики событий на ввод и отправку формы.
+```typescript
+constructor(formElement: HTMLFormElement, eventBus: IEvents)
+```
+Инициализирует экземпляр класса `Form` с элементом формы и шиной событий. Настраивает элементы интерфейса и подписывает обработчики событий на ввод и отправку формы.
 
 - `private handleInputChange(field: keyof T, value: string): void` - Обрабатывает изменения в полях формы и вызывает событие изменения значения через шину событий.
 
@@ -385,6 +420,9 @@ interface ICard {
 
 ### Методы класса
 #### Конструктор
-- `constructor(container: HTMLElement, actions: ISuccessActions)` - Инициализирует экземпляр класса `Success` с контейнером и действиями. Настраивает элементы интерфейса и подписывает обработчик события на кнопку закрытия.
+```typescript
+constructor(container: HTMLElement, actions: ISuccessActions)
+```
+Инициализирует экземпляр класса `Success` с контейнером и действиями. Настраивает элементы интерфейса и подписывает обработчик события на кнопку закрытия.
 
-#### `set total(amount: string): void` - Устанавливает сумму списания и обновляет текст в элементе `totalElement`.
+- `set total(amount: string): void` - Устанавливает сумму списания и обновляет текст в элементе `totalElement`.
