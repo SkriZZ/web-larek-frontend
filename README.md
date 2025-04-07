@@ -238,7 +238,7 @@ constructor(container: HTMLElement, actions?: ICardActions)
 
 - `set title(value: string): void` - Устанавливает заголовок карточки.
 
-#### `set category(value: string): void` - Устанавливает категорию карточки и применяет соответствующий CSS-класс.
+- `set category(value: string): void` - Устанавливает категорию карточки и применяет соответствующий CSS-класс.
 
 - `set image(src: string): void` - Устанавливает изображение для карточки.
 
